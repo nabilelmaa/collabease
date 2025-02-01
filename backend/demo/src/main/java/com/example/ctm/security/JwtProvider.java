@@ -18,9 +18,9 @@ public class JwtProvider {
     public String generateToken(String email, String firstName, String lastName, String picture) {
         return Jwts.builder()
                 .setSubject(email)
-                .claim("firstName", firstName) // Add first name as a claim
-                .claim("lastName", lastName)   // Add last name as a claim
-                .claim("picture", picture)      // Add picture URL as a claim
+                .claim("firstName", firstName) 
+                .claim("lastName", lastName)  
+                .claim("picture", picture)   
                 .setIssuedAt(new Date())
                 .setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
                 .signWith(jwtSecretKey)
