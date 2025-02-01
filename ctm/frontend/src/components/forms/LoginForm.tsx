@@ -24,8 +24,6 @@ const LoginForm: React.FC = () => {
         }
       );
       const { token } = response.data;
-
-      // Store the token in localStorage
       localStorage.setItem("token", token);
       navigate("/dashboard");
     } catch (error: any) {
