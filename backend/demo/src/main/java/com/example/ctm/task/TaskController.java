@@ -45,5 +45,5 @@ public class TaskController {
     //        Delete a task
     //        Get all tasks for a team
     //        Assign a task to a team member
-    //        Change task status (e.g., to-do, in progress, completed)
+    //        Change task status (to-do, in progress, completed)
 }
