@@ -17,7 +17,6 @@ function Register() {
       navigate('/auth/login');
     } catch (error) {
       console.error("Registration failed:", error);
-      // Display error message
     }
   };
 
