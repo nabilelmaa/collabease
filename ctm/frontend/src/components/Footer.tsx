@@ -1,22 +1,20 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"; // Import Lucide icons
+import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const location = useLocation();
 
-  // Conditions to hide footer on specific pages
   const isLoginPage = location.pathname === "/auth/login";
   const isRegisterPage = location.pathname === "/auth/register";
 
   if (isLoginPage || isRegisterPage) {
-    return null; // Don't render footer on login and register pages
+    return null;
   }
 
   return (
     <footer className="bg-gradient-to-b from-neutral-100 to-white dark:from-neutral-800 dark:to-neutral-950 p-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Column 1: Company Info */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Company Name</h3>
           <p className="text-gray-600 dark:text-gray-400 mt-2">
@@ -24,7 +22,6 @@ const Footer = () => {
           </p>
         </div>
         
-        {/* Column 2: Navigation Links */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Quick Links</h3>
           <ul className="mt-2 space-y-2">
@@ -46,7 +43,6 @@ const Footer = () => {
           </ul>
         </div>
         
-        {/* Column 3: Social Media Links */}
         <div>
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">Follow Us</h3>
           <div className="flex space-x-4 mt-2">
@@ -65,8 +61,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      
-      {/* Bottom Copyright */}
       <div className="mt-8 border-t border-gray-300 dark:border-gray-700 pt-4 text-center">
         <p className="text-gray-600 dark:text-gray-400">
           &copy; {new Date().getFullYear()} Your Company Name. All rights reserved.
