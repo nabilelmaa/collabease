@@ -77,7 +77,7 @@ public class AuthController {
 //            String jwt = jwtProvider.generateToken(loginRequest.getEmail());
             return ResponseEntity.ok((JwtResponse) Map.of(
                     "token", "jwt",
-                    "redirectUrl", "/dashboard" // Specify the redirect URL here
+                    "redirectUrl", "/dashboard"
             ));
         } catch (Exception ex) {
             System.out.println("Authentication failed: " + ex.getMessage());
