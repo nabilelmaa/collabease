@@ -35,10 +35,9 @@ public class Team {
 
     // Default constructor (needed by JPA)
     public Team() {
-        this.createdAt = LocalDateTime.now(); // Set createdAt to the current time
+        this.createdAt = LocalDateTime.now();
     }
 
-    // Getters and setters
     public Long getId() {
         return id;
     }
